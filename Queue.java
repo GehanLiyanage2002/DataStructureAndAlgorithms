@@ -22,7 +22,7 @@ public class Queue {
     }
 
     public boolean isEmpty() {
-        return front == -1;
+        return front > rear;
     }
 
     public void enqueue(int x) {
@@ -45,6 +45,11 @@ public class Queue {
         }
     }
 
+    public void printQueue() {
+        for (int i = front; i <= rear; i++) {
+            System.out.print(QueueArr[i] + "  ");
+        }
+    }
 
 
     public static void main(String[] args) {
@@ -55,9 +60,13 @@ public class Queue {
         myQueue.enqueue(20);
         myQueue.enqueue(30);    
         myQueue.enqueue(40);
+        myQueue.enqueue(50);
+        myQueue.enqueue(60);  // This should show Queue Overflow
 
         myQueue.dequeue();
         myQueue.dequeue();
+
+        myQueue.printQueue();
     }
 
     
