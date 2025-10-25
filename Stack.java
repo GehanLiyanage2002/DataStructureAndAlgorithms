@@ -39,6 +39,18 @@ public class Stack {
         }
     }
 
+    void printStack() {
+
+        for (int i = 0; i <= top; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+
+    int size() {
+
+        return top + 1;
+    }
+
     public static void main(String[] args) {
 
         Stack myStack = new Stack(5);
@@ -47,12 +59,17 @@ public class Stack {
         myStack.push(30);
         myStack.push(40);
         myStack.push(50);
-        
 
         myStack.pop();
         myStack.pop();
-        myStack.pop();
-        myStack.pop();
+
+        myStack.printStack();
+        
+
+        // myStack.pop();
+        // myStack.pop();
+        // myStack.pop();
+        // myStack.pop();
         
 
     }
